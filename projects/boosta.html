@@ -172,17 +172,13 @@
     border-radius: var(--r-xl);
     overflow: hidden;
     border: 1px solid var(--line);
-    background:
-      radial-gradient(circle at 30% 40%, var(--accent-soft) 0%, transparent 50%),
-      repeating-linear-gradient(45deg, rgba(244,241,234,0.025) 0 1px, transparent 1px 18px),
-      linear-gradient(135deg, var(--bg-3), var(--bg-2));
-    display: flex; align-items: center; justify-content: center;
-    color: var(--muted);
-    font-family: var(--font-mono);
-    font-size: 12px;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
+    background: var(--bg-2);
     position: relative;
+  }
+  .case-cover img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    display: block;
   }
   .case-cover::before {
     content: ''; position: absolute; inset: 0;
@@ -460,7 +456,7 @@
     </div>
 
     <div class="case-cover reveal visible delay-3">
-      <span>Project Cover · 2400×1350</span>
+      <img src="../assets/boosta-image.png" alt="Boosta brand cover" />
     </div>
   </div>
 </header>

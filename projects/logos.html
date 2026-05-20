@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Logotype Collection — Case Study · Dmytro Kalyta</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="case-study.css" />
+
+<style>
+  /* Logo grid — stacked, full-width */
+  .logo-grid {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+    margin-top: var(--space-7);
+  }
+  .logo-cell {
+    width: 100%;
+    aspect-ratio: 16 / 7;
+    background: #1f1f22;
+    border: 1px solid var(--line);
+    border-radius: var(--r-lg);
+    position: relative;
+    overflow: hidden;
+    transition: background 0.3s var(--ease-out), border-color 0.3s var(--ease-out);
+  }
+  .logo-cell img {
+    width: 100%; height: 100%;
+    object-fit: contain;
+    transition: transform 0.5s var(--ease-out);
+  }
+  .logo-cell:hover { background: #28282c; border-color: var(--line-strong); }
+  .logo-cell:hover img { transform: scale(1.04); }
+  .logo-cell .caption {
+    position: absolute;
+    bottom: 14px; left: 18px;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--muted);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    opacity: 0;
+    transform: translateY(4px);
+    transition: opacity 0.25s var(--ease-out), transform 0.25s var(--ease-out);
+  }
+  .logo-cell:hover .caption { opacity: 1; transform: translateY(0); }
+
+  /* Categories */
+  .categories {
+    display: grid; grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-3);
+    margin-top: var(--space-6);
+  }
+  .cat {
+    padding: var(--space-4) var(--space-4);
+    border: 1px solid var(--line);
+    border-radius: var(--r-md);
+    background: var(--bg-2);
+  }
+  .cat .cat-num {
+    font-family: var(--font-serif);
+    font-size: 36px;
+    line-height: 1;
+    color: var(--accent);
+    letter-spacing: -0.03em;
+    margin-bottom: 6px;
+  }
+  .cat .cat-label {
+    font-family: var(--font-mono); font-size: 11px;
+    color: var(--muted); text-transform: uppercase;
+    letter-spacing: 0.12em;
+  }
+
+  @media (max-width: 720px) {
+    .logo-cell { aspect-ratio: 4 / 3; }
+    .categories { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 480px) {
+    .categories { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<div class="bg-grid" aria-hidden="true"></div>
+<div class="bg-orb" aria-hidden="true"></div>
+
+<nav class="nav" id="nav">
+  <div class="container nav-inner">
+    <a href="../portfolio.html" class="back-link">
+      <i class="fa-solid fa-arrow-left-long"></i> Back to all work
+    </a>
+    <span class="nav-brand"><span class="dot">●</span> dmytro.kalyta / case study</span>
+  </div>
+</nav>
+
+<header class="case-hero">
+  <div class="container">
+    <div class="case-meta-top reveal visible">
+      <span class="accent">Logotype Collection</span>
+      <span class="sep">/</span>
+      <span>Brand Marks · Identity</span>
+      <span class="sep">/</span>
+      <span>18 selected works</span>
+    </div>
+    <h1 class="case-title reveal visible delay-1">
+      Eighteen marks, <em>one belief</em> — a logo earns its place by being unforgettable at any size.
+    </h1>
+    <p class="case-summary reveal visible delay-2">
+      A selection of brand marks designed across hospitality, fashion, fintech, charity, retail and digital agencies — each one solving a different identity problem with the smallest possible amount of geometry.
+    </p>
+
+    <div class="case-meta reveal visible delay-3">
+      <div class="meta-cell">
+        <div class="label">Role</div>
+        <div class="val">Brand &amp; Identity Designer</div>
+      </div>
+      <div class="meta-cell">
+        <div class="label">Output</div>
+        <div class="val">18 logotypes</div>
+      </div>
+      <div class="meta-cell">
+        <div class="label">Categories</div>
+        <div class="val">Hospitality · Retail · Charity · Tech</div>
+      </div>
+      <div class="meta-cell">
+        <div class="label">Format</div>
+        <div class="val">Vector · Scalable · Single colour</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ───── Intro ───── -->
+<section class="section">
+  <div class="container">
+    <div class="reveal"><span class="section-num">01 — Context</span></div>
+    <h2 class="reveal delay-1">A logo isn't decoration — it's a <em>compression</em> of a brand.</h2>
+    <div class="prose reveal delay-2">
+      <p>
+        The marks below come from real client engagements over the last few years — some part of full brand systems, some standalone identity work. Each one answers the same question in a different way: <strong>what's the smallest shape that still says the brand?</strong>
+      </p>
+      <p>
+        I work in a tight loop with the client — words, sketches, vectors, refinement — usually 3–5 rounds. Most of these went through 20–40 sketched options before landing. What you see is the survivor.
+      </p>
+    </div>
+
+    <div class="categories reveal delay-2">
+      <div class="cat"><div class="cat-num">06</div><div class="cat-label">Hospitality &amp; Food</div></div>
+      <div class="cat"><div class="cat-num">04</div><div class="cat-label">Retail &amp; Fashion</div></div>
+      <div class="cat"><div class="cat-num">04</div><div class="cat-label">Tech &amp; Digital</div></div>
+      <div class="cat"><div class="cat-num">04</div><div class="cat-label">Charity &amp; Lifestyle</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ───── The Grid ───── -->
+<section class="section" style="padding-top: 0;">
+  <div class="container">
+    <div class="reveal"><span class="section-num">02 — The collection</span></div>
+    <h2 class="reveal delay-1">Selected marks, <em>2018 — 2024</em>.</h2>
+
+    <div class="logo-grid reveal delay-2">
+      <div class="logo-cell"><img src="../assets/logo-01.png" alt="Logotype collection · KD mark" loading="lazy" /><span class="caption">KD · Personal mark</span></div>
+      <div class="logo-cell"><img src="../assets/logo-02.png" alt="Barcelona logo" loading="lazy" /><span class="caption">Barcelona · Fashion</span></div>
+      <div class="logo-cell"><img src="../assets/logo-03.png" alt="Porto logo" loading="lazy" /><span class="caption">Porto · Fintech</span></div>
+      <div class="logo-cell"><img src="../assets/logo-04.png" alt="Logo mark 04" loading="lazy" /><span class="caption">Brand mark</span></div>
+      <div class="logo-cell"><img src="../assets/logo-05.png" alt="Імперія Меха logo" loading="lazy" /><span class="caption">Імперія Меха · Retail</span></div>
+      <div class="logo-cell"><img src="../assets/logo-06.png" alt="Gorilla emblem" loading="lazy" /><span class="caption">Gorilla · Emblem</span></div>
+      <div class="logo-cell"><img src="../assets/logo-07.png" alt="25 Digital agency" loading="lazy" /><span class="caption">25 Digital · Agency</span></div>
+      <div class="logo-cell"><img src="../assets/logo-08.png" alt="Heart with people" loading="lazy" /><span class="caption">Charity mark</span></div>
+      <div class="logo-cell"><img src="../assets/logo-09.png" alt="Fjord Coffee Shop" loading="lazy" /><span class="caption">Fjord · Coffee Shop</span></div>
+      <div class="logo-cell"><img src="../assets/logo-11.png" alt="Lungul Spa" loading="lazy" /><span class="caption">Lungul Spa · Wellness</span></div>
+      <div class="logo-cell"><img src="../assets/logo-12.png" alt="Od Zera restaurant" loading="lazy" /><span class="caption">Od Zera · Restaurant</span></div>
+      <div class="logo-cell"><img src="../assets/logo-14.png" alt="WHY Flowers" loading="lazy" /><span class="caption">WHY Flowers · Florist</span></div>
+      <div class="logo-cell"><img src="../assets/logo-16.png" alt="Fruit-character mark" loading="lazy" /><span class="caption">Orchard · Mascot</span></div>
+      <div class="logo-cell"><img src="../assets/logo-17.png" alt="Тримай Плече charity" loading="lazy" /><span class="caption">Тримай Плече · Charity</span></div>
+      <div class="logo-cell"><img src="../assets/logo-18.png" alt="And many more — closing slide with extra marks" loading="lazy" /><span class="caption">… and many more</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ───── Pullquote ───── -->
+<section class="section" style="padding-top: 0;">
+  <div class="container">
+    <div class="pullquote reveal">
+      <span class="marker">"</span>If a mark doesn't work in one colour at 16 pixels, it isn't done yet.<span class="marker">"</span>
+      <div style="font-family: var(--font-mono); font-style: normal; font-size: 12px; color: var(--muted); margin-top: var(--space-3); letter-spacing: 0.08em;">
+        — house rule for every mark in this collection
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ───── Principles ───── -->
+<section class="section">
+  <div class="container">
+    <div class="reveal"><span class="section-num">03 — Principles</span></div>
+    <h2 class="reveal delay-1">How I approach a <em>mark</em>.</h2>
+
+    <div class="phases reveal delay-2">
+      <div class="phase">
+        <div class="phase-num">PRINCIPLE 01</div>
+        <h3>Works in one colour first</h3>
+        <p>Every mark is designed in black-on-light before anything else. If it doesn't read as a silhouette, no amount of colour will save it later.</p>
+      </div>
+      <div class="phase">
+        <div class="phase-num">PRINCIPLE 02</div>
+        <h3>Survives at favicon scale</h3>
+        <p>Every mark is reviewed at 16×16 px. If it loses its meaning at that size, it gets simplified — even if the simplification hurts.</p>
+      </div>
+      <div class="phase">
+        <div class="phase-num">PRINCIPLE 03</div>
+        <h3>One idea per mark</h3>
+        <p>No mark in this collection is doing two things at once. A coffee cup with antlers, a fork making an O, a heart of two people — one move, executed cleanly.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ───── Stats ───── -->
+<section class="section">
+  <div class="container">
+    <div class="reveal"><span class="section-num">04 — By the numbers</span></div>
+    <h2 class="reveal delay-1">The shape of this practice.</h2>
+
+    <div class="outcomes reveal delay-2">
+      <div class="stat">
+        <div class="label">Marks designed</div>
+        <div class="stat-num">18<span class="suffix">·shown</span></div>
+        <p>Selected from a broader catalogue of ~40 brand engagements across the last seven years.</p>
+      </div>
+      <div class="stat">
+        <div class="label">Sketch rounds</div>
+        <div class="stat-num">25<span class="suffix">·avg</span></div>
+        <p>Average number of sketched directions per mark before narrowing to 3 finalists. The mark you see is the survivor.</p>
+      </div>
+      <div class="stat">
+        <div class="label">Categories</div>
+        <div class="stat-num">8<span class="suffix">+</span></div>
+        <p>Hospitality, fashion, fintech, charity, retail, tech, wellness, lifestyle. Different brand registers, same construction discipline.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ───── Reflection ───── -->
+<section class="section">
+  <div class="container">
+    <div class="reveal"><span class="section-num">05 — Reflection</span></div>
+    <h2 class="reveal delay-1">What this practice taught me.</h2>
+    <div class="prose reveal delay-2">
+      <p>
+        Doing this many marks side-by-side surfaces a useful lesson: <strong>the hardest moves are the simplest</strong>. The marks I'm proudest of are the ones I tried to make a hundred different ways before realising the original two-line sketch was already done.
+      </p>
+      <p>
+        The other lesson is about trust. A logo doesn't make a brand — a brand makes a logo. The best engagements were ones where the client trusted the simple option. The worst were ones where we added "one more thing" until the mark stopped working.
+      </p>
+    </div>
+
+    <div class="tags reveal delay-2">
+      <span class="tag">Brand Identity</span>
+      <span class="tag">Logo Design</span>
+      <span class="tag">Wordmark</span>
+      <span class="tag">Monogram</span>
+      <span class="tag">Vector</span>
+      <span class="tag">Illustrator</span>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <a href="arcade.html" class="next-cta reveal">
+      <div>
+        <div class="label">Next case study</div>
+        <h3>Arcade Machine Shop — landing that feels like <em>the arcade itself</em>.</h3>
+      </div>
+      <span class="arrow"><i class="fa-solid fa-arrow-right-long"></i></span>
+    </a>
+  </div>
+</section>
+
+<footer>
+  <div class="container footer-inner">
+    <span>© 2026 Dmytro Kalyta · Kyiv, Ukraine</span>
+    <span><a href="../portfolio.html">← All work</a></span>
+  </div>
+</footer>
+
+<script>
+  const nav = document.getElementById('nav');
+  const onScroll = () => {
+    if (window.scrollY > 24) nav.classList.add('scrolled');
+    else nav.classList.remove('scrolled');
+  };
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        io.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+
+</body>
+</html>
